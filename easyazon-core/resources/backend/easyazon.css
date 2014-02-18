@@ -74,3 +74,8 @@ p.easyazon-sell {
 .media-embed .setting .easyazon-input.easyazon-button {
 	width: auto;
 }
+
+p.easyazon-upsell {
+	clear: both;
+	padding-top: 10px;
+}

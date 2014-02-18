@@ -12,3 +12,12 @@
 		<option value="no"><?php _e('No'); ?></option>
 	</select>
 </label>
+
+<label class="setting">
+	<span><?php _e('No Follow'); ?></span>
+	<select data-bind="value: shortcodeLinkNofollow">
+		<option value="default"><?php _e('Default'); ?></option>
+		<option value="yes"><?php _e('Yes'); ?></option>
+		<option value="no"><?php _e('No'); ?></option>
+	</select>
+</label>

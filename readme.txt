@@ -1,22 +1,60 @@
 === EasyAzon ===
 Contributors: boostwpcom, nickohrn
-Tags: admin, amazon, editor
+Tags: admin, amazon, affiliate, associates, editor, content
 Requires at least: 3.8
 Tested up to: 3.8.1
-Stable tag: 3.0.5
+Stable tag: 3.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Quickly and easily insert Amazon affiliate links into your site's content.
+EasyAzon is the quickest way to create Amazon affiliate links from within WordPress.
 
 == Description ==
 
-EasyAzon is the easiest way to build Amazon product links for your WordPress website. All you have to do
-is enter your Amazon credentials, optionally include your Amazon Associates Tracking IDs, and search for the
-products you want to feature.
+**EasyAzon** is the quickest way to create Amazon affiliate links from within your WordPress post editor. You can create text affiliate links direct to any product available for sale on Amazon.com without going through the tedious steps of manually creating links from within the Amazon.com website _(huge time saver)_.
 
-EasyAzon features an easy to use search interface that gives you access to the entire Amazon catalog across
-every available Amazon locale. Stop wasting time building Amazon links the old way and start using EasyAzon  today.
+**[Upgrade to EasyAzon Pro to unlock more affiliate link options and link types](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgtop "Upgrade to EasyAzon Pro")
+
+= EasyAzon Features =
+
+EasyAzon set up is simple and we support every location that has an Amazon Associates affiliate program including:
+
+* United States
+* Canada
+* China
+* France
+* Germany
+* India
+* Italy
+* Japan
+* Spain
+* United Kingdom
+
+You can create text affiliate links that can be optionally toggled to open in new windows and/or have the nofollow attribute applied. This can be controlled site wide through the plugin setting page defaults or individually controlled on a per link basis.
+
+= EasyAzon Pro Features =
+
+EasyAzon Pro provides additional support for more affiliate link types and affiliate link options all designed to help you save time and generate more affiliate commissions.
+
+**EasyAzon Pro Additional Affiliate Link Types**
+
+In addition to text affiliate links you can also create:
+
+1. Image affiliate links(insert an image of a product from Amazon and turn that image into a clickable affiliate link)
+1. Product information blocks (displays product title, image thumbnail, price info and a buy button in a styled block)
+1. Call to actions (insert Amazon.com buy buttons)
+
+**EasyAzon Pro Additional Affiliate Link Options**
+
+In addition to toggling links to open in new windows or applying the nofollow attribute you can also enable:
+
+1. Automated affiliate link cloaking
+1. Product pop ups (display product info via a pop up box on mouse hover)
+1. Add to cart functionality (increases the cookie length which gives you more time to earn a commission if the visitor adds the item to their shopping cart)
+1. Automatic link localization (earn commissions from previously wasted global traffic by automatically converting affiliate links to match the location your website is being visited from: e.g. UK visitors see Amazon.co.uk links)
+1. Support for multiple affiliate tracking ID's (track which links convert best)
+
+**[Upgrade To EasyAzon Pro here!](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgbot)**
 
 == Installation ==
 
@@ -48,6 +86,9 @@ Yes! EasyAzon is free software provided to anyone looking to build text links on
 4. Specify link text, select your Amazon Associates Tracking ID, and change the desired link options. After that, click _Insert Shortcode_
 
 == Changelog ==
+
+= 3.0.6 =
+* Added nofollow ability for links
 
 = 3.0.5 =
 * Initial release to general public
