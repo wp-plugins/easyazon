@@ -13,7 +13,7 @@ EasyAzon is the quickest way to create Amazon affiliate links from within WordPr
 
 **EasyAzon** is the quickest way to create Amazon affiliate links from within your WordPress post editor. You can create text affiliate links direct to any product available for sale on Amazon.com without going through the tedious steps of manually creating links from within the Amazon.com website _(huge time saver)_.
 
-**[Upgrade to EasyAzon Pro to unlock more affiliate link options and link types](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgtop "Upgrade to EasyAzon Pro")
+[Upgrade to EasyAzon Pro to unlock more affiliate link options and link types](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgtop "Upgrade to EasyAzon Pro")
 
 = EasyAzon Features =
 
@@ -36,7 +36,7 @@ You can create text affiliate links that can be optionally toggled to open in ne
 
 EasyAzon Pro provides additional support for more affiliate link types and affiliate link options all designed to help you save time and generate more affiliate commissions.
 
-**EasyAzon Pro Additional Affiliate Link Types**
+= EasyAzon Pro Additional Affiliate Link Types =
 
 In addition to text affiliate links you can also create:
 
@@ -44,7 +44,7 @@ In addition to text affiliate links you can also create:
 1. Product information blocks (displays product title, image thumbnail, price info and a buy button in a styled block)
 1. Call to actions (insert Amazon.com buy buttons)
 
-**EasyAzon Pro Additional Affiliate Link Options**
+= EasyAzon Pro Additional Affiliate Link Options =
 
 In addition to toggling links to open in new windows or applying the nofollow attribute you can also enable:
 
@@ -54,7 +54,7 @@ In addition to toggling links to open in new windows or applying the nofollow at
 1. Automatic link localization (earn commissions from previously wasted global traffic by automatically converting affiliate links to match the location your website is being visited from: e.g. UK visitors see Amazon.co.uk links)
 1. Support for multiple affiliate tracking ID's (track which links convert best)
 
-**[Upgrade To EasyAzon Pro here!](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgbot)**
+[Upgrade To EasyAzon Pro here!](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgbot)
 
 == Installation ==
 
