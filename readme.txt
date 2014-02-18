@@ -13,7 +13,7 @@ EasyAzon is the quickest way to create Amazon affiliate links from within WordPr
 
 **EasyAzon** is the quickest way to create Amazon affiliate links from within your WordPress post editor. You can create text affiliate links direct to any product available for sale on Amazon.com without going through the tedious steps of manually creating links from within the Amazon.com website _(huge time saver)_.
 
-= [Upgrade to EasyAzon Pro to unlock more affiliate link options and link types](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgtop "Upgrade to EasyAzon Pro") =
+[Upgrade to EasyAzon Pro to unlock more affiliate link options and link types](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgtop "Upgrade to EasyAzon Pro")
 
 = EasyAzon Features =
 
@@ -54,7 +54,7 @@ In addition to toggling links to open in new windows or applying the nofollow at
 1. Automatic link localization (earn commissions from previously wasted global traffic by automatically converting affiliate links to match the location your website is being visited from: e.g. UK visitors see Amazon.co.uk links)
 1. Support for multiple affiliate tracking ID's (track which links convert best)
 
-= [Upgrade To EasyAzon Pro here!](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgbot) =
+[Upgrade To EasyAzon Pro here!](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgbot)
 
 == Installation ==
 
