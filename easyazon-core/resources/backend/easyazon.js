@@ -107,6 +107,7 @@ var EasyAzonSearchVM = function() {
 	/// Data
 	self.shortcodeContent = ko.observable('');
 	self.shortcodeLinkNewWindow = ko.observable('default');
+	self.shortcodeLinkNofollow = ko.observable('default');
 	self.shortcodeProduct = ko.observable(false);
 	self.shortcodeSearchTerms = ko.observable('');
 	self.shortcodeTag = ko.observable('');
@@ -119,6 +120,7 @@ var EasyAzonSearchVM = function() {
 			asin: self.shortcodeProduct().original.ASIN,
 			locale: self.locale(),
 			new_window: self.shortcodeLinkNewWindow(),
+			nofollow: self.shortcodeLinkNofollow(),
 			tag: self.shortcodeTagFormatted()
 		};
 	};

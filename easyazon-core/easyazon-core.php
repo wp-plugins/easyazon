@@ -34,6 +34,7 @@ class EasyAzon_Core {
 			add_action('easyazon_admin_enqueue_scripts', array(__CLASS__, 'enqueue_scripts'), 11);
 			add_action('easyazon_load_settings_page', array(__CLASS__, 'load_settings_page'), 10);
 			add_action('easyazon_shortcode_link_options', array(__CLASS__, 'add_shortcode_link_options'));
+			add_action('easyazon_shortcode_after_actions', array(__CLASS__, 'shortcode_after_actions'));
 			add_action('media_buttons', array(__CLASS__, 'add_media_button'), 11);
 			add_action('media_upload_easyazon', array(__CLASS__, 'add_media_upload_output'));
 		} else {
@@ -108,6 +109,10 @@ class EasyAzon_Core {
 			$attributes['target'] = array('_blank');
 		}
 
+		if(isset($input['nofollow']) && ('yes' === $input['nofollow'] || ('default' === $input['nofollow'] && 'yes' === easyazon_get_setting('links_nofollow')))) {
+			$attributes['rel'] = isset($attributes['rel']) && is_array($attributes['rel']) ? array_merge($attributes['rel'], array('nofollow')) : array('nofollow');
+		}
+
 		return $attributes;
 	}
 
@@ -118,6 +123,7 @@ class EasyAzon_Core {
 			'asin' => '',
 			'locale' => 'US',
 			'new_window' => 'default',
+			'nofollow' => 'default',
 			'tag' => false,
 		));
 	}
@@ -149,8 +155,14 @@ class EasyAzon_Core {
 		include('views/search/_inc/link-options.php');
 	}
 
-	public static function display_search_upgrade_nag() {
+	public static function shortcode_after_actions($context) {
+		if(!class_exists('EasyAzon_Pro')) {
+			include('views/search/_inc/upsell.php');
+		}
+	}
 
+	public static function display_search_upgrade_nag() {
+		echo '<p class="easyazon-upsell">' . sprintf(__('Unlock extra affiliate link types with <a href="%1$s" target="_blank">EasyAzon Pro</a> including images, call to actions, info blocks and link to search results pages - <a href="%1$s" target="_blank">Upgrade Today!</a>'), esc_attr(esc_url('http://easyazon.com/why-pro/?utm_source=easyazonplugin&utm_medium=link&utm_campaign=easyazonsearch'))) . '</p>';
 	}
 
 	//// Administrative interface
@@ -162,7 +174,6 @@ class EasyAzon_Core {
 	}
 
 	public static function add_media_upload_output() {
-
 		return wp_iframe(array(__CLASS__, 'get_media_upload_output'));
 	}
 
@@ -258,6 +269,13 @@ class EasyAzon_Core {
 
 		add_settings_section('links', __('Link Options'), array(__CLASS__, 'display_settings_section__links'), EasyAzon_Base::SETTINGS_PAGE);
 		add_settings_field('links_new_window', __('New Window'), array(__CLASS__, 'display_settings_field__links__new_window'), EasyAzon_Base::SETTINGS_PAGE, 'links', array('label_for' => easyazon_get_settings_id('links_new_window_yes')));
+
+		add_settings_section('links-extra', '', '__return_false', EasyAzon_Base::SETTINGS_PAGE);
+		add_settings_field('links_nofollow', __('No Follow'), array(__CLASS__, 'display_settings_field__links__nofollow'), EasyAzon_Base::SETTINGS_PAGE, 'links-extra', array('label_for' => easyazon_get_settings_id('links_nofollow_yes')));
+
+		if(!class_exists('EasyAzon_Pro')) {
+			add_settings_section('upsell', __('Upgrade to EasyAzon Pro'), array(__CLASS__, 'display_settings_section__upsell'), EasyAzon_Base::SETTINGS_PAGE);
+		}
 	}
 
 	//// Settings sections
@@ -276,6 +294,10 @@ class EasyAzon_Core {
 
 	public static function display_settings_section__search() {
 		include('views/settings/search.php');
+	}
+
+	public static function display_settings_section__upsell() {
+		include('views/settings/upsell.php');
 	}
 
 	//// Settings fields
@@ -345,14 +367,14 @@ class EasyAzon_Core {
 	public static function display_settings_field__links__nofollow() {
 		$links_nofollow = easyazon_get_setting('links_nofollow');
 
-		$settings_checked = '';
+		$settings_checked = 'yes' === $links_nofollow ? 'checked="checked"' : '';
 		$settings_error = easyazon_has_settings_error('links_nofollow') ? 'easyazon-error' : '';
 		$settings_id_no = easyazon_get_settings_id('links_nofollow_no');
 		$settings_id_yes = easyazon_get_settings_id('links_nofollow_yes');
 		$settings_name = easyazon_get_settings_name('links_nofollow');
 
 		printf('<input type="hidden" id="%1$s" name="%2$s" value="no" />', $settings_id_no, $settings_name);
-		printf('<label class="easyazon-disabled"><input disabled="disabled" type="checkbox" id="%1$s" name="%2$s" %3$s value="yes" /> %4$s</label>', $settings_id_yes, $settings_name, $settings_checked, __('I want the <code>nofollow</code> attribute applied to all EasyAzon links'));
+		printf('<label><input type="checkbox" id="%1$s" name="%2$s" %3$s value="yes" /> %4$s</label>', $settings_id_yes, $settings_name, $settings_checked, __('I want the <code>nofollow</code> attribute applied to all EasyAzon links'));
 		easyazon_the_settings_error('links_nofollow');
 	}
 
@@ -478,6 +500,7 @@ class EasyAzon_Core {
 
 			// Links
 			'links_new_window' => 'yes',
+			'links_nofollow' => 'yes',
 
 			// Search
 			'content_types' => array('page', 'post'),
