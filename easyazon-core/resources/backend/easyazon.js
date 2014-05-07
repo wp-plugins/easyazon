@@ -291,10 +291,12 @@ var EasyAzonSearchResultVM = function(result) {
 };
 
 if(('undefined' !== typeof wp) && ('undefined' !== typeof wp.media) && ('undefined' !== typeof wp.media.view) && ('undefined' !== typeof wp.media.view.MediaFrame)) {
-	var iframeMenu = wp.media.view.MediaFrame.prototype.iframeMenu;
-	wp.media.view.MediaFrame.prototype.iframeMenu = function(view) {
-		iframeMenu.apply(this, arguments);
+	var easyAzonCreateIframeStates = wp.media.view.MediaFrame.prototype.createIframeStates;
+	wp.media.view.MediaFrame.prototype.createIframeStates = function() {
+		easyAzonCreateIframeStates.apply(this, arguments);
 
-		view.unset(EasyAzon.stateName);
+		this.on('menu:render:default', function(view) {
+			view.unset(EasyAzon.stateName);
+		}, this);
 	};
 }
