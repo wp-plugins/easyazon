@@ -2,8 +2,8 @@
 Contributors: boostwpcom, nickohrn
 Tags: admin, amazon, affiliate, associates, editor, content
 Requires at least: 3.8
-Tested up to: 3.8.1
-Stable tag: 3.0.6
+Tested up to: 3.9
+Stable tag: 3.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

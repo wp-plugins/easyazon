@@ -3,10 +3,6 @@
 class EasyAzon_Core {
 	/// Constants
 
-	//// Notifications
-	const NOTIFICATION_OPTION = 'easyazon_notifier';
-	const NOTIFICATION_URL = 'http://easyazon.com/tracker/tracker.php';
-
 	//// Shortcodes
 	const SHORTCODE_LINK = 'easyazon_link';
 	const SHORTCODE_LINK_LEGACY = 'easyazon-link';
@@ -27,7 +23,6 @@ class EasyAzon_Core {
 		add_action('easyazon_register_shortcodes', array(__CLASS__, 'register_shortcodes'));
 
 		add_action('admin_enqueue_scripts', array(__CLASS__, 'admin_enqueue_scripts'));
-		add_action('init', array(__CLASS__, 'usage_notifier'));
 		add_action('wp_ajax_easyazon', array(__CLASS__, 'ajax_actions'));
 
 		if(is_admin()) {
@@ -88,18 +83,6 @@ class EasyAzon_Core {
 		}
 
 		wp_send_json(self::_parse_amazon_response($amazon_response, $request));
-	}
-
-	//// Generic
-
-	public static function usage_notifier() {
-
-		$value = get_option(self::NOTIFICATION_OPTION);
-
-		if('yes' !== $value) {
-			$response = wp_remote_get(add_query_arg(array('domain' => md5(parse_url(home_url('/'), PHP_URL_HOST))), self::NOTIFICATION_URL));
-			update_option(self::NOTIFICATION_OPTION, 'yes');
-		}
 	}
 
 	//// Output
