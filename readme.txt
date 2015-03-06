@@ -1,9 +1,9 @@
 === EasyAzon ===
 Contributors: boostwpcom, nickohrn
-Tags: admin, amazon, affiliate, associates, editor, content
+Tags: admin, amazon, affiliate, associates, editor, content, easy azon
 Requires at least: 3.8
-Tested up to: 3.9
-Stable tag: 3.0.8
+Tested up to: 4.1.1
+Stable tag: 4.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,13 @@ EasyAzon set up is simple and we support every location that has an Amazon Assoc
 
 You can create text affiliate links that can be optionally toggled to open in new windows and/or have the nofollow attribute applied. This can be controlled site wide through the plugin setting page defaults or individually controlled on a per link basis.
 
+When you install EasyAzon, you will also get access to our Amazon Affiliate Training, which includes:
+* What goes into a succesful Amazon Affiliate Site
+* Tips to maximize your Amazon commissions
+* Backlinking techniques that work in 2015
+* How to do keyword research
+* And much more...
+
 = EasyAzon Pro Features =
 
 EasyAzon Pro provides additional support for more affiliate link types and affiliate link options all designed to help you save time and generate more affiliate commissions.
@@ -53,6 +60,8 @@ In addition to toggling links to open in new windows or applying the nofollow at
 1. Add to cart functionality (increases the cookie length which gives you more time to earn a commission if the visitor adds the item to their shopping cart)
 1. Automatic link localization (earn commissions from previously wasted global traffic by automatically converting affiliate links to match the location your website is being visited from: e.g. UK visitors see Amazon.co.uk links)
 1. Support for multiple affiliate tracking ID's (track which links convert best)
+
+If you have any foreign traffic, you'll most likely see an immediate bump in your Amazon commissions upon installing EasyAzon Pro.
 
 [Upgrade To EasyAzon Pro here!](http://easyazon.com/why-pro/?utm_source=wordpressorg&utm_medium=link&utm_campaign=easyazonwporgbot)
 
@@ -78,6 +87,10 @@ credentials from there and enter them into the correct fields on the EasyAzon se
 
 Yes! EasyAzon is free software provided to anyone looking to build text links on their site.
 
+= Where can I get video demos of EasyAzon?
+
+[Click here to see help videos / tutorials](http://easyazon.com/how-to)
+
 == Screenshots ==
 
 1. EasyAzon features an easy to use settings interface. The only required fields are your Amazon Access Key ID and Secret Access Key.
@@ -86,6 +99,20 @@ Yes! EasyAzon is free software provided to anyone looking to build text links on
 4. Specify link text, select your Amazon Associates Tracking ID, and change the desired link options. After that, click _Insert Shortcode_
 
 == Changelog ==
+
+= 4.0.9 =
+* Detect PHP version and detect whether the minimum required version is met
+* Fixed bug whereby disabling the rich editor caused the EasyAzon pop up to not appear
+
+= 4.0.6 =
+* Removed duplicate images from normalized item results
+
+= 4.0.5 =
+* Fixed upsell links for upgrading to EasyAzon Pro
+* Deactivate non-compatible EasyAzon Pro versions as appropriate
+
+= 4.0.0 =
+* Completely rewritten to be faster and more performant
 
 = 3.0.6 =
 * Added nofollow ability for links

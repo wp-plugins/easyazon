@@ -1,0 +1,27 @@
+p.description.easyazon-search-result-error {
+	color: #990000;
+}
+
+.widefat td.easyazon-search-result-column-image,
+.widefat th.easyazon-search-result-column-image {
+	width: 100px;
+}
+
+.widefat td.easyazon-search-result-column-image img {
+	height: auto !important;
+	max-width: 100%;
+}
+
+.widefat td.easyazon-search-result-column-insert,
+.widefat th.easyazon-search-result-column-insert {
+	width: 150px;
+}
+
+.easyazon-search-spinner {
+	float: none;
+	vertical-align: top;
+}
+
+.easyazon-search-spinner-active {
+	display: inline-block;
+}
