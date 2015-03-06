@@ -1,0 +1,3 @@
+<p class="description">
+	<?php printf(__('Unlock extra affiliate link types with <a href="%s" target="_blank">EasyAzon Pro</a> including images, call to actions, info blocks and link to search results pages - <a href="%s" target="_blank">Upgrade Today!</a>'), 'http://easyazon.com/why-pro/?utm_source=easyazonplugin&utm_medium=link&utm_campaign=easyazonsearch', 'http://easyazon.com/why-pro/?utm_source=easyazonplugin&utm_medium=link&utm_campaign=easyazonsearch'); ?>
+</p>

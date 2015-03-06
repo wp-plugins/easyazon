@@ -1,0 +1,1 @@
+<p><?php _e('Please set your default search locale using the option below. When you use EasyAzon the links you create will default to this location so if most of your visitors come from the United States for example, you would set your default locale to United States.'); ?></p>
