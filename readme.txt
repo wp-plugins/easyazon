@@ -3,7 +3,7 @@ Contributors: boostwpcom, nickohrn
 Tags: admin, amazon, affiliate, associates, editor, content, easy azon
 Requires at least: 3.8
 Tested up to: 4.1.1
-Stable tag: 4.0.9
+Stable tag: 4.0.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,6 +99,10 @@ Yes! EasyAzon is free software provided to anyone looking to build text links on
 4. Specify link text, select your Amazon Associates Tracking ID, and change the desired link options. After that, click _Insert Shortcode_
 
 == Changelog ==
+
+= 4.0.11 =
+* No longer disable EasyAzon Pro less than Version 4
+* Provide instructions on where to get EasyAzon Version 3
 
 = 4.0.9 =
 * Detect PHP version and detect whether the minimum required version is met
