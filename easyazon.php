@@ -3,7 +3,7 @@
 Plugin Name: EasyAzon
 Plugin URI: http://boostwp.com/products/easyazon-pro/
 Description: Quickly and easily insert Amazon affiliate links into your site's content. By installing this plugin, you agree to the <a href="http://easyazon.com/terms/" target="_blank">EasyAzon terms of service</a>. <a href="http://easyazon.com/why-pro/?utm_source=easyazonplugin&utm_medium=link&utm_campaign=pluginpage" target="_blank">Upgrade to Pro</a> for more link options and affiliate link types.
-Version: 4.0.11
+Version: 4.0.12
 Author: BoostWP
 Author URI: http://boostwp.com/
 */
@@ -13,7 +13,7 @@ if(!defined('EASYAZON_PHP_VERSION_REQUIRED')) {
 }
 
 if(!defined('EASYAZON_VERSION')) {
-	define('EASYAZON_VERSION', '4.0.11');
+	define('EASYAZON_VERSION', '4.0.12');
 }
 
 function easyazon_initialization() {

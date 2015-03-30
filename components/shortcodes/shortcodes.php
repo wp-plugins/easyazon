@@ -87,6 +87,7 @@ class EasyAzon_Components_Shortcodes {
 		$link_atts['class']           = array('easyazon-link');
 		$link_atts['data-identifier'] = isset($shortcode_atts['identifier']) ? $shortcode_atts['identifier'] : '';
 		$link_atts['data-locale']     = isset($shortcode_atts['locale']) ? $shortcode_atts['locale'] : '';
+		$link_atts['data-tag']        = isset($shortcode_atts['tag']) ? $shortcode_atts['tag'] : '';
 		$link_atts['href']            = easyazon_get_url($shortcode_atts);
 
 		if(isset($shortcode_atts['nw']) && 'y' === $shortcode_atts['nw']) {

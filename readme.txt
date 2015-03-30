@@ -3,7 +3,7 @@ Contributors: boostwpcom, nickohrn
 Tags: admin, amazon, affiliate, associates, editor, content, easy azon
 Requires at least: 3.8
 Tested up to: 4.1.1
-Stable tag: 4.0.11
+Stable tag: 4.0.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
