@@ -12,7 +12,6 @@ class EasyAzon_Components_ProCheck {
 		if(is_admin()) {
 			// Actions that only affect the administrative interface or operation
 			add_action('admin_init', array(__CLASS__, 'check'));
-
 		} else {
 			// Actions that only affect the frontend interface or operation
 		}
@@ -37,8 +36,6 @@ class EasyAzon_Components_ProCheck {
 		foreach($plugins as $key => $plugin) {
 			if(false !== strpos($plugin['Name'], 'EasyAzon') && false !== strpos($plugin['Name'], 'Pro') && is_plugin_active($key) && version_compare($plugin['Version'], '4.0', 'lt')) {
 				add_action('admin_notices', array(__CLASS__, 'notice'));
-
-				deactivate_plugins($key, false);
 			}
 		}
 	}
@@ -48,7 +45,7 @@ class EasyAzon_Components_ProCheck {
 	#region Notices
 
 	public static function notice() {
-		printf('<div id="easyazon-check-pro-notice" class="error"><p>%s</p></div>', __('Your current version of EasyAzon Pro is out-of-date and has been deactivated. Please upgrade to <a href="http://easyazon.com/v4upgrade/" target="_blank">Version 4 of EasyAzon Pro</a> or <a href="https://downloads.wordpress.org/plugin/easyazon.3.0.8.zip" target="_blank">download Version 3 of EasyAzon Core</a> to keep using Version 3 of EasyAzon Pro.'));
+		printf('<div id="easyazon-check-pro-notice" class="error"><p>%s</p></div>', __('Your current version of EasyAzon Pro is out-of-date and may cause conflicts on your site. Please upgrade to <a href="http://easyazon.com/v4upgrade/" target="_blank">Version 4 of EasyAzon Pro</a> or <a href="https://downloads.wordpress.org/plugin/easyazon.3.0.8.zip" target="_blank">download Version 3 of EasyAzon Core</a> to keep using Version 3 of EasyAzon Pro.'));
 	}
 
 	#endregion Notices
